@@ -1,19 +1,21 @@
 # Example
 
-**TODO: Add description**
+Example elixir web app using [CodeReloader](https://github.com/pilu/code_reloader).
 
-## Installation
+If needed, `CodeReloader.Plug` recompiles the code at each request so that you don't need to restart the application
+manually after changing the code.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `example` to your list of dependencies in `mix.exs`:
+## Usage
 
-```elixir
-def deps do
-  [{:example, "~> 0.1.0"}]
-end
+```bash
+git clone git@github.com:pilu/code-reload-example.git
+cd code-reload-example
+mix deps.get
+mix run --no-halt
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/example](https://hexdocs.pm/example).
+* Open [http://localhost:9000](http://localhost:9000) on your browser.
+* Edit `lib/example/router.ex` changing the response body from `Hello 1` to `Hello 2`
+* Go back to the browser and refresh the page
+
 
